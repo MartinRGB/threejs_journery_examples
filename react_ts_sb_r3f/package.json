@@ -1,0 +1,90 @@
+{
+  "name": "react-typescript-webpack-starter",
+  "version": "1.0.0",
+  "description": "A starter template for React with Typescript using Webpack 5",
+  "scripts": {
+    "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
+    "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [
+    "React",
+    "TypeScript",
+    "Webpack 5",
+    "Starter Template",
+    "Boilerplate"
+  ],
+  "author": "Vishwas",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.17.2",
+    "@emotion/babel-plugin": "^11.7.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "@react-three/fiber": "^7.0.26",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@use-gesture/react": "^10.2.6",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "7",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "react-refresh": "^0.11.0",
+    "react-spring": "^9.4.3",
+    "react-use-measure": "^2.1.1",
+    "style-loader": "^3.3.1",
+    "three": "^0.137.5",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}
